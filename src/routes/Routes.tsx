@@ -51,9 +51,9 @@ export default function Routes() {
     <Suspense fallback={<Header />}>
       <Switch>
         {/* {featureToggle?.page.marketplaceIntro && <Route path='/' exact component={MarketplaceIntroPage} />} */}
-        {/* {!featureToggle?.page.marketplaceIntro && <Route path='/' exact component={MainPage} />} */}
+        {!featureToggle?.page.marketplaceIntro && <Route path='/' exact component={MainPage} />}
         <Route path='/' exact component={MainPage} />
-        {/* <Route path='/transparency' exact component={TransparencyPage} />
+        <Route path='/transparency' exact component={TransparencyPage} />
         <Route path='/fractionalize' exact component={FractionalizePage} />
         <Route path='/fractionalize/:address/:tokenId' exact component={FractionalizeDetailsPage} />
         <Route path='/portfolio' exact component={PortfolioPage} />
@@ -79,7 +79,7 @@ export default function Routes() {
         <Route path='/token/buy' exact component={BuyPage} />
         <Route path='/token/farm' exact component={FarmPage} />
         <Route path='/token/claim' exact component={ClaimPage} />
-        <Route path='/disclaimer' exact component={DisclaimerPage} /> */}
+        <Route path='/disclaimer' exact component={DisclaimerPage} />
         <Route path='**' component={Page404} />
       </Switch>
     </Suspense>
