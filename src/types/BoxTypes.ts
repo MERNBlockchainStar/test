@@ -67,7 +67,7 @@ export interface BoxAsset {
 
 }
 interface metadata {
-  name?: string
+  name: string
   image?: string
   imageFull?: string
   description?: string
