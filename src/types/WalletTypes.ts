@@ -1,31 +1,43 @@
 
+interface Itype {
+  name: string
+}
 interface metadata {
-  author: string
-  description: string
-  image:string
-  imageFull:string
-  name:string
-  animation_url: string
+  author?: string
+  description?: string
+  image?:string
+  imageFull?:string
+  name?:string
+  animation_url?: string
+  asset_contract?: Itype
+  social_media?:string
+  web_site_url?:string
+  twitter?: string
+  telegram?:string
+  discord?: string
+  instagram?: string
+  animationType?: string
+  attributes?: []
 }
 
  
 export interface WalletErc721Item {
   tokenId: string
-  metadata:metadata
-  ownerAddress:string
-  extension: string
+  metadata?:metadata
+  ownerAddress?:string
+  extension?: string
   address: string
-  fee: string
-  boxAddress: string
-  fractions: string
-  fractionsCount: string
-  id: string
-  limitPrice: string
-  reservePrice: string
-  seller: string
-  cutoff: number | null
-  status: 'CREATED' | 'FUNDED' | 'STARTED_OR_ENDING' | 'ENDING' | 'ENDED'
-  timestamp: string
+  fee?: string
+  boxAddress?: string
+  fractions?: string
+  fractionsCount?: string
+  id?: string
+  limitPrice?: string
+  reservePrice?: string
+  seller?: string
+  cutoff?: number | null
+  status?: 'CREATED' | 'FUNDED' | 'STARTED_OR_ENDING' | 'ENDING' | 'ENDED'
+  timestamp?: string
   boxCount?: number
   name?: string
   symbol?: string
@@ -33,21 +45,21 @@ export interface WalletErc721Item {
 
 interface PaymentToken {
   id: string
-  decimals: number
+  decimals?: number
   symbol: string
-  address: string
+  address?: string
 }
 interface Collection {
   id: string
   name: string
-  symbol: string
+  symbol?: string
 }
 
 interface Target {
   id: string
   tokenId: string
-  tokenURI: string
-  collection: Collection
+  tokenURI?: string
+  collection?: Collection
 }
 interface Iliquidity {
   priceDollar: string
@@ -63,8 +75,11 @@ export interface WalletERC20Share {
   target: Target
   balance: string
   released: boolean
-  cutoff:number
-  liquidity:Iliquidity
+  cutoff?:number
+  liquidity?:Iliquidity
+  totalSupply:string
+  exitPrice:string
+  vaultBalance:string
 }
 export interface AssetERC20 {
 

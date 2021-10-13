@@ -10,7 +10,7 @@ import { ThemeProviderEnum, themeVar } from '../graphql/variables/Shared'
 import { MultiWalletProvider } from '../graphql/variables/WalletVariable'
 import Routes from '../routes/Routes'
 import { multiWalletService } from '../services/MultiWalletService'
-// import '../styles/fonts.css'------live:.cid.63b94d06de716d1f------
+// import '../styles/fonts.css'
 // import '../styles/reset.css'
 import { darkTheme, lightTheme, Theme } from '../styles/theme'
 import { ConnectWalletModal } from './multi-wallet/ConnectWalletModal'

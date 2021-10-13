@@ -23,9 +23,9 @@ export interface NftCardProps {
   exitCurrency?: string
   size?: 'small' | 'medium' | 'large'
   metadata?: {
-    name: string
-    description: string
-    image: string
+    name?: string
+    description?: string
+    image?: string
     animation_url?: string
     animationType?: string
     asset_contract?: {

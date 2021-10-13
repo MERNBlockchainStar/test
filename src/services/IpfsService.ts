@@ -46,10 +46,10 @@ export const PinataIpfsService = (chainId: number): IpfsService => {
       }
 
       const uploadResponse = request.data
-
+      console.log(uploadResponse)
       return {
-        cid: uploadResponse.cid,
-        error: uploadResponse.error
+        cid: "uploadResponse.cid",
+        error: "uploadResponse.error"
       }
     }
   }

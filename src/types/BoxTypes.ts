@@ -34,19 +34,12 @@ export interface NftBoxItems {
   address: string
   tokenId: string
   image_url:string
-  fee: string
-  fractions: string
-  fractionsCount: string
-  id: string
-  limitPrice: string
-  paymentToken: PaymentToken
-  reservePrice: string
-  seller: string
-  cutoff: number | null
-  buyers: Buyer[]
-  status: 'CREATED' | 'FUNDED' | 'STARTED_OR_ENDING' | 'ENDING' | 'ENDED'
-  target: Target
-  timestamp: string
+  // fee: string
+  // fractions: string
+  // fractionsCount: string
+  // id: string
+  // paymentToken: PaymentToken
+  // target: Target
   boxCount?: number
   erc721?: WalletErc721Item
   name: string
@@ -70,31 +63,40 @@ export interface BoxAsset {
   discord: string
   instagram: string
   author:string
+  social_media: string
 
 }
 interface metadata {
-  image:string
-  name: string
+  name?: string
+  image?: string
+  imageFull?: string
+  description?: string
+  animationType?: string
+  animation_url?: string
+  author?: string
+  totalSupply?: string
 }
 export interface WalletErc721ItemModal {
   tokenId: string
   loading: boolean
   disabled: boolean
-  ownerAddress: string
-  extension: string
+  ownerAddress?: string
+  extension?: string
   address: string
-  fee: string
-  boxAddress: string
-  fractions: string
+  fee?: string
+  boxAddress?: string
+  fractions?: string
   symbol?: string
-  metadata: metadata
+  metadata?: metadata
   name?: string
+  fractionsCount?: string
+  id?: string
+  limitPrice?: string
+  reservePrice?: string
+  seller?: string
+  cutoff?: number | null
+  status?: 'CREATED' | 'FUNDED' | 'STARTED_OR_ENDING' | 'ENDING' | 'ENDED'
+  timestamp?: string
+  boxCount?: number
 }
-// eslint-disable-next-line no-shadow
-export enum CollectiveBuyStatus {
-  CREATED = 'CREATED',
-  FUNDED = 'FUNDED',
-  STARTING_OR_ENDING = 'STARTED_OR_ENDING',
-  ENDING = 'ENDING',
-  ENDED = 'ENDED'
-}
+

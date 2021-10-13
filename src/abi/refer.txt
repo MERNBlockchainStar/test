@@ -1,4 +1,4 @@
-- erc20abi (peertopeermarkets.so)
+- erc20abi (peertopeermarkets.sol)
 ----------------------------------------------
 -erc20nftfyauction  (auctionFractionalizer.sol)
 ----------------
